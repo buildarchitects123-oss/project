@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Species Prediction</title>
+</head>
+<body>
+    <h1>Predict Iris Species using ANN</h1>
+    <form method="POST">
+        <label>Sepal Length:</label>
+        <input type="number" name="sepal_length" step="0.01" required><br><br>
+        <label>Sepal Width:</label>
+        <input type="number" name="sepal_width" step="0.01" required><br><br>
+        <label>Petal Length:</label>
+        <input type="number" name="petal_length" step="0.01" required><br><br>
+        <label>Petal Width:</label>
+        <input type="number" name="petal_width" step="0.01" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Species: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
